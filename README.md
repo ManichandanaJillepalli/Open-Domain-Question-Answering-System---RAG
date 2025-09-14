@@ -1,6 +1,16 @@
 # Open-Domain-Question-Answering-System---RAG
 🤖 Production-ready RAG system for open-domain QA | Hybrid retrieval (Dense+BM25) + LLM generation | Natural Questions &amp; TriviaQA | FastAPI + Docker | 61.4% F1 score
-A scalable RAG question-answering system combining SBERT embeddings, BM25 retrieval, and LLM generation with comprehensive evaluation on Natural Questions and TriviaQA datasets.
+A scalable RAG question-answering system combining SBERT embeddings, BM25 retrieval, and LLM generation with comprehensive evaluation on Natural Questions and TriviaQA datasets. 
+
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Data Pipeline │ → │ Retrieval System │ → │ Generation API  │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                       │                       │
+    ┌────────────┐         ┌─────────────┐        ┌─────────────┐
+    │ NQ + TQA   │         │Dense + BM25 │        │ FastAPI +   │
+    │Processing  │         │+ Reranking  │        │ Docker      │
+    └────────────┘         └─────────────┘        └─────────────┘
+
 
 🎯 Core Value Proposition
 Problem Solved: Eliminates LLM hallucinations through grounded retrieval
